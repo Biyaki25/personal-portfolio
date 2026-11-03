@@ -3,24 +3,320 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Daniel Nyamongo | Software Engineer</title>
-  <meta name="description" content="Daniel Nyamongo — Software Engineer. I build reliable, scalable, and user-friendly software." />
-  <meta property="og:title" content="Daniel Nyamongo | Software Engineer" />
-  <meta property="og:description" content="I build reliable, scalable, and user-friendly software." />
-  <meta property="og:type" content="website" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.7/babel.min.js"></script>
+  <title>Daniel Nyamongo Kamanda | Software Engineer</title>
+  <meta name="description" content="Daniel Nyamongo Kamanda — Software Engineer. I build reliable, scalable, and user-friendly software." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="root"></div>
-  <script type="text/babel" data-presets="react" src="script.js"></script>
+  <!-- Icon sprite: brand icons (filled) + UI icons (stroke, class "s") -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 5v14c0 1.66-4.03 3-9 3s-9-1.34-9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></symbol>
+    <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></symbol>
+  </svg>
+
+  <header>
+    <div class="navrow">
+      <div class="logo">Daniel<span>.dev</span></div>
+      <nav class="navlinks">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a>
+        <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="row">
+        <button id="themeBtn" type="button" class="iconbtn" aria-label="Toggle theme">◐</button>
+        <button id="menuBtn" type="button" class="iconbtn" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+    <nav id="mobileNav" class="wrap">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="tag">Software Engineer</span>
+          <h1 class="name">
+            <span>Daniel</span>
+            <span>Nyamongo</span>
+            <span>Kamanda</span>
+          </h1>
+          <p class="lede">I build reliable, scalable, and user-friendly software.</p>
+          <p class="bio">Daniel turns complex ideas into clean, maintainable frontend and backend applications. He values clean code and meaningful digital products, collaborates efficiently within agile teams, and prioritizes continuous technological learning.</p>
+          <div class="handle">@Biyaki25</div>
+          <div class="ctas">
+            <a href="#projects" class="btn btn-primary">View my projects</a>
+            <a href="#contact" class="btn btn-outline">Contact me</a>
+            <a href="assets/cv.pdf" download="Daniel_Nyamongo_CV.pdf" class="btn btn-outline"><svg class="ico s" aria-hidden="true"><use href="#i-download"/></svg>Download CV</a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/Biyaki25" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico"><use href="#i-github"/></svg></a>
+            <a href="https://www.linkedin.com/in/daniel-kamanda-a356ba38a" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico"><use href="#i-linkedin"/></svg></a>
+            <a href="mailto:danielnyamongo704@gmail.com" aria-label="Email"><svg class="ico s"><use href="#i-mail"/></svg></a>
+          </div>
+        </div>
+        <div class="photo-ring">
+          <img src="assets/profile.jpg" alt="Daniel Nyamongo Kamanda" onerror="this.replaceWith(Object.assign(document.createElement('div'),{textContent:'[ REPLACEABLE PROFILE PHOTO ]'}))" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="wrap">
+      <div class="reveal">
+        <div class="sec-head">
+          <div class="eyebrow">About</div>
+          <h2>Who I am</h2>
+          <p class="sec-desc">A quick look at how I think, what I care about, and what I'm building right now.</p>
+        </div>
+        <div class="grid-2">
+          <div class="muted" style="max-width:600px">
+            <p style="margin-bottom:16px">A software engineer committed to the craftsmanship of high-performing web tools. I thrive on architecting clean microservices, building pixel-perfect interfaces, and managing end-to-end user experiences.</p>
+            <p>My philosophy centers around modern systems design, continuous profiling for latency, and active team contributions. I'd rather ship one thing that works well than five things that half-work.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="card feat"><span class="icwrap"><svg class="ico s"><use href="#i-code"/></svg></span><div><h4>Clean, maintainable code</h4><p>Readable structure over clever shortcuts.</p></div></div>
+            <div class="card feat"><span class="icwrap"><svg class="ico s"><use href="#i-grid"/></svg></span><div><h4>Systems-level thinking</h4><p>Designing for how pieces fit together.</p></div></div>
+            <div class="card feat"><span class="icwrap"><svg class="ico s"><use href="#i-users"/></svg></span><div><h4>Collaborative by default</h4><p>Works well inside agile teams.</p></div></div>
+            <div class="card"><div class="mono muted" style="font-size:.82rem;margin-bottom:6px">Currently focused on</div>Developing cloud-native microservices &amp; interactive front-end architectures.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="wrap band" style="max-width:none">
+      <div class="reveal wrap" style="padding:0 var(--edge)">
+        <div class="sec-head">
+          <div class="eyebrow">Services</div>
+          <h2>How I can help</h2>
+          <p class="sec-desc">The kinds of work I take on, from the interface people see to the systems that keep it running.</p>
+        </div>
+        <div class="grid-2c">
+          <div class="card svc"><div class="icwrap"><svg class="ico s"><use href="#i-monitor"/></svg></div><h3>Product-Minded Frontend</h3><p>Building responsive, accessible interfaces in React and TypeScript that feel fast and intuitive, from component architecture to pixel-level polish.</p></div>
+          <div class="card svc"><div class="icwrap"><svg class="ico s"><use href="#i-server"/></svg></div><h3>Reliable Backend &amp; APIs</h3><p>Designing REST APIs and backend services with Node.js and Express, focused on clear structure, solid error handling, and maintainability.</p></div>
+          <div class="card svc"><div class="icwrap"><svg class="ico s"><use href="#i-db"/></svg></div><h3>Database Design</h3><p>Modeling relational and document data in PostgreSQL, MySQL, and MongoDB, balancing normalization with real-world query performance.</p></div>
+          <div class="card svc"><div class="icwrap"><svg class="ico s"><use href="#i-rocket"/></svg></div><h3>DevOps &amp; Deployment</h3><p>Setting up Git workflows, Docker containers, and CI/CD pipelines so code ships smoothly and reliably.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="wrap">
+      <div class="reveal">
+        <div class="sec-head">
+          <div class="eyebrow">Toolkit</div>
+          <h2>Technical expertise</h2>
+          <p class="sec-desc">The languages, frameworks, and tools I use day to day, grouped by where they fit in a project.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card"><h3 class="skill-title"><svg class="ico s"><use href="#i-code"/></svg>Programming Languages</h3><div class="tags" id="skLang"></div></div>
+          <div class="card"><h3 class="skill-title"><svg class="ico s"><use href="#i-monitor"/></svg>Frontend Development</h3><div class="tags" id="skFront"></div></div>
+          <div class="card"><h3 class="skill-title"><svg class="ico s"><use href="#i-server"/></svg>Backend Development</h3><div class="tags" id="skBack"></div></div>
+          <div class="card"><h3 class="skill-title"><svg class="ico s"><use href="#i-db"/></svg>Databases</h3><div class="tags" id="skDb"></div></div>
+          <div class="card"><h3 class="skill-title"><svg class="ico s"><use href="#i-cog"/></svg>DevOps &amp; Tools</h3><div class="tags" id="skTools"></div></div>
+          <div class="card"><h3 class="skill-title"><svg class="ico s"><use href="#i-grid"/></svg>Software Engineering</h3><div class="tags" id="skEng"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="wrap band" style="max-width:none">
+      <div class="reveal wrap" style="padding:0 var(--edge)">
+        <div class="sec-head">
+          <div class="eyebrow">Gallery</div>
+          <h2>Featured projects</h2>
+          <p class="sec-desc">A selection of things I've built, from live AI tools to automation and client websites. Filter by type.</p>
+        </div>
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="All Work">All Work</button>
+          <button class="filter-btn" data-filter="Web">Web</button>
+          <button class="filter-btn" data-filter="AI">AI</button>
+          <button class="filter-btn" data-filter="Automation">Automation</button>
+          <button class="filter-btn" data-filter="Node.js">Node.js</button>
+        </div>
+        <div id="projGrid" class="grid-3">
+          <article class="card proj-card" data-category="Web">
+            <div class="proj-thumb">Personal Website</div>
+            <div class="proj-body">
+              <h3>Personal Website</h3>
+              <p>This portfolio site itself — a responsive, dependency-free site with a light/dark theme and a CV download.</p>
+              <div class="tags"><span class="pill sm">HTML</span><span class="pill sm">CSS</span><span class="pill sm">JavaScript</span></div>
+              <div class="links"><a href="#" onclick="return false;">Live Demo</a><a href="#" onclick="return false;">GitHub</a></div>
+            </div>
+          </article>
+          <article class="card proj-card" data-category="Automation">
+            <div class="proj-thumb">CV Optimization</div>
+            <div class="proj-body">
+              <h3>CV Optimization</h3>
+              <p>A personal toolkit that builds a tailored, ATS-safe CV for each job application. One master data file renders to a clean single-column Word and PDF CV, gets checked the way an Applicant Tracking System would (readable text, 2-page limit, keyword coverage), and every application is logged to a tracker. Built as a Claude Code skill (/apply), with build and check scripts that also run standalone.</p>
+              <div class="tags"><span class="pill sm">Python</span><span class="pill sm">Claude Code</span><span class="pill sm">Automation</span></div>
+              <div class="links"><a href="#" onclick="return false;">Live Demo</a><a href="#" onclick="return false;">GitHub</a></div>
+            </div>
+          </article>
+          <article class="card proj-card" data-category="AI">
+            <div class="proj-thumb">Agrika AI Platform</div>
+            <div class="proj-body">
+              <h3>Agrika AI Platform</h3>
+              <p>An AI platform that detects crop diseases from plant images. Integrates the OpenAI API and Vapi.ai with a Node.js/TypeScript and Python (Flask) back end. Deployed live at ai.agrika.farm.</p>
+              <div class="tags"><span class="pill sm">Node.js</span><span class="pill sm">TypeScript</span><span class="pill sm">Python</span><span class="pill sm">Flask</span><span class="pill sm">OpenAI API</span><span class="pill sm">Vapi.ai</span></div>
+              <div class="links"><a href="https://ai.agrika.farm" target="_blank" rel="noopener">Live Demo</a><a href="#" onclick="return false;">GitHub</a></div>
+            </div>
+          </article>
+          <article class="card proj-card" data-category="Web">
+            <div class="proj-thumb">Fahari Gardens Hotel Website</div>
+            <div class="proj-body">
+              <h3>Fahari Gardens Hotel Website</h3>
+              <p>A website built for Fahari Gardens Hotel.</p>
+              <div class="tags"><span class="pill sm">Web</span></div>
+              <div class="links"><a href="#" onclick="return false;">Live Demo</a><a href="#" onclick="return false;">GitHub</a></div>
+            </div>
+          </article>
+          <article class="card proj-card" data-category="Node.js">
+            <div class="proj-thumb">Trading-BOT-wolf MASTER</div>
+            <div class="proj-body">
+              <h3>Trading-BOT-wolf MASTER</h3>
+              <p>W.O.L.F — a Binance trading bot for Node.js. Watches a trading pair in real time over the Binance WebSocket, sizes each purchase against a configured budget, places limit buy/sell orders, and only sells once a position clears the target profit percentage (fees accounted for). Supports optional profit-lock and stop-limit triggers, plus compounding budgets.</p>
+              <div class="tags"><span class="pill sm">Node.js</span><span class="pill sm">Binance API</span><span class="pill sm">WebSocket</span></div>
+              <div class="links"><a href="#" onclick="return false;">Live Demo</a><a href="#" onclick="return false;">GitHub</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="wrap">
+      <div class="reveal">
+        <div class="sec-head">
+          <div class="eyebrow">Timeline</div>
+          <h2>Work experience</h2>
+          <p class="sec-desc">Where I've worked and what I delivered, most recent first.</p>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <h3>Web Developer — Adidas</h3>
+            <div class="muted" style="font-size:.85rem">Full-time · Herzogenaurach, Germany (placeholder location) · Jan 2025 – Oct 2025</div>
+            <ul>
+              <li>Collaborated on scalable storefront components and increased localized UI responsiveness metrics.</li>
+              <li>Integrated internal analytics tooling using React.js workflows and REST APIs.</li>
+            </ul>
+            <div class="tags"><span class="pill sm">React.js</span><span class="pill sm">JavaScript</span><span class="pill sm">TypeScript</span><span class="pill sm">Tailwind CSS</span></div>
+          </div>
+          <div class="tl-item">
+            <h3>Backend Developer — Lami Technologies</h3>
+            <div class="muted" style="font-size:.85rem">Freelance · Herzogenaurach, Germany (placeholder location) · Jan 2025 – Oct 2025</div>
+            <ul>
+              <li>Designed and maintained REST API services with Node.js and Express.</li>
+              <li>Worked across the stack on React.js front ends backed by clean, well-structured APIs.</li>
+            </ul>
+            <div class="tags"><span class="pill sm">Node.js</span><span class="pill sm">Express.js</span><span class="pill sm">REST APIs</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="wrap band" style="max-width:none">
+      <div class="reveal wrap" style="padding:0 var(--edge)">
+        <div class="sec-head">
+          <div class="eyebrow">Credentials</div>
+          <h2>Education &amp; certifications</h2>
+          <p class="sec-desc">Formal training and certifications behind my technical foundation.</p>
+        </div>
+        <div class="grid-2c">
+          <div class="card"><div class="mono" style="color:var(--accent);font-size:.75rem;margin-bottom:10px">Graduate Program</div><h3>Software Engineering</h3><div class="muted" style="font-size:.88rem;margin-bottom:10px">Moringa School</div><p>Comprehensive technical curriculum focusing on modern software design patterns and full-stack development.</p></div>
+          <div class="card"><div class="mono" style="color:var(--accent);font-size:.75rem;margin-bottom:10px">Certification</div><h3>Python Certification</h3><div class="muted" style="font-size:.88rem;margin-bottom:10px">Simplilearn SkillUp</div><p>Credential Code: 9702514</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="github" class="wrap">
+      <div class="reveal">
+        <div class="sec-head">
+          <div class="eyebrow">Contributions</div>
+          <h2>GitHub activity</h2>
+          <p class="sec-desc">A snapshot of my open-source work and repositories on GitHub.</p>
+        </div>
+        <div class="grid-2c" style="margin-bottom:14px;max-width:560px">
+          <div class="card"><div class="stat-num">1,482*</div><div class="muted" style="font-size:.82rem">Mock commits (YTD)</div><div class="muted stat-note">*Visibly labeled placeholder numbers</div></div>
+          <div class="card"><div class="stat-num">94*</div><div class="muted" style="font-size:.82rem">Pull requests</div><div class="muted stat-note">*Visibly labeled placeholder numbers</div></div>
+        </div>
+        <div class="grid-2c">
+          <div class="card"><h3 class="mono">Biyaki25 / mock-engine-core</h3><p style="margin-bottom:8px">Minimal mock compiler written in TypeScript.</p><div class="muted" style="font-size:.75rem">TypeScript</div></div>
+          <div class="card"><h3 class="mono">Biyaki25 / clean-rest-api</h3><p style="margin-bottom:8px">Boilerplate template illustrating clean architecture and JWT logic.</p><div class="muted" style="font-size:.75rem">JavaScript</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clients" class="wrap band" style="max-width:none">
+      <div class="reveal wrap" style="padding:0 var(--edge)">
+        <div class="sec-head">
+          <div class="eyebrow">Fit</div>
+          <h2>Who I work well with</h2>
+          <p class="sec-desc">The teams and businesses where I add the most value.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card center"><div class="icwrap"><svg class="ico s"><use href="#i-rocket"/></svg></div><h3>Early-Stage Startups</h3><p>Teams that need to move fast without cutting corners — I like helping lay a foundation that won’t need rebuilding in six months.</p></div>
+          <div class="card center"><div class="icwrap"><svg class="ico s"><use href="#i-trend"/></svg></div><h3>Growing Product Teams</h3><p>Teams outgrowing their current stack, looking for someone who can pick up existing code and extend it cleanly.</p></div>
+          <div class="card center"><div class="icwrap"><svg class="ico s"><use href="#i-building"/></svg></div><h3>Small &amp; Medium Businesses</h3><p>Businesses ready to modernize manual processes into dependable, automated systems.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap">
+      <div class="reveal">
+        <div class="sec-head">
+          <div class="eyebrow">Reach out</div>
+          <h2>Get in touch</h2>
+          <p class="sec-desc">Have a project or role in mind? Send a message or use any of the channels below.</p>
+        </div>
+        <div class="grid-2">
+          <div>
+            <p class="muted" style="margin-bottom:20px">Have an interesting project or position? I'm always open to discussing clean code, front-end optimization, and robust back-end pipelines.</p>
+            <form id="contactForm" novalidate>
+              <div class="field"><label for="cname">Your Name</label><input id="cname" name="name" /><div class="err" id="err-name"></div></div>
+              <div class="field"><label for="cemail">Your Email</label><input id="cemail" name="email" type="email" /><div class="err" id="err-email"></div></div>
+              <div class="field"><label for="cmsg">Message</label><textarea id="cmsg" name="message" rows="4"></textarea><div class="err" id="err-msg"></div></div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <div id="formStatus" role="status"></div>
+            </form>
+          </div>
+          <div>
+            <p class="muted" style="margin-bottom:18px">Let's collaborate on software solutions.</p>
+            <div class="contact-line"><svg class="ico s"><use href="#i-mail"/></svg><a href="mailto:danielnyamongo704@gmail.com">danielnyamongo704@gmail.com</a><button id="copyEmailBtn" type="button" class="small-btn">Copy Email</button></div>
+            <div class="contact-line"><svg class="ico s"><use href="#i-phone"/></svg>+254 790 715 010</div>
+            <div class="contact-line"><svg class="ico"><use href="#i-linkedin"/></svg><a href="https://www.linkedin.com/in/daniel-kamanda-a356ba38a" target="_blank" rel="noopener" style="word-break:break-all">linkedin.com/in/daniel-kamanda-a356ba38a</a></div>
+            <div class="contact-line"><svg class="ico"><use href="#i-github"/></svg><a href="https://github.com/Biyaki25" target="_blank" rel="noopener">github.com/Biyaki25</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot-row">
+      <div>
+        <div style="font-weight:600">Daniel Nyamongo Kamanda</div>
+        <div class="muted" style="font-size:.85rem">Biyaki25 · © <span id="year"></span> Daniel Nyamongo Kamanda. All rights reserved.</div>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/Biyaki25" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico"><use href="#i-github"/></svg></a>
+        <a href="https://www.linkedin.com/in/daniel-kamanda-a356ba38a" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico"><use href="#i-linkedin"/></svg></a>
+        <a href="mailto:danielnyamongo704@gmail.com" aria-label="Email"><svg class="ico s"><use href="#i-mail"/></svg></a>
+      </div>
+      <button id="backTop" type="button">Back to top ↑</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
